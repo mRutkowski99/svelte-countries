@@ -1,4 +1,4 @@
-import type { Theme } from '../domain/theme';
+import type { Theme } from '../domain/Theme';
 import { getStoredTheme } from '../utils/getStoredTheme';
 import { writable } from 'svelte/store';
 

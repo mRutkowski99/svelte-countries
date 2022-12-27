@@ -1,4 +1,4 @@
-import type { Theme } from '../domain/theme';
+import type { Theme } from '../domain/Theme';
 
 export function themeName(theme: Theme): string {
 	if (theme === 'dark') return 'Dark Mode';

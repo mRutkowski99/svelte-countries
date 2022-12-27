@@ -1,4 +1,4 @@
-import type { Theme } from '../domain/theme';
+import type { Theme } from '../domain/Theme';
 import { THEME_STORAGE_KEY } from './constants';
 
 function isTheme(value: unknown): value is Theme {
