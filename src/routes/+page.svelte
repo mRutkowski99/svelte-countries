@@ -1,2 +1,7 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+	import { theme } from '../stores/theme.store';
+	import { onDestroy } from 'svelte';
+	import { THEME_STORAGE_KEY } from '../utils/constants';
+
+	onDestroy(() => localStorage.setItem(THEME_STORAGE_KEY, $theme));
+</script>
