@@ -7,7 +7,7 @@
 
 <a
 	href={country.code.toLowerCase()}
-	class="shadow-md overflow-hidden flex-col items-stretch block bg-light_element rounded-md "
+	class="shadow-md overflow-hidden flex-col items-stretch block bg-light_element rounded-md mx-auto"
 	transition:fade
 >
 	<div class="w-full h-40">

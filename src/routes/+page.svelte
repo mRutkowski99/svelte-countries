@@ -7,12 +7,17 @@
 	import { THEME_STORAGE_KEY } from '../utils/constants';
 	import CountryCard from '../components/CountryCard.svelte';
 	import SearchInput from '../components/SearchInput.svelte';
+	import RegionDropdown from '../components/RegionDropdown.svelte';
 
 	onDestroy(() => localStorage.setItem(THEME_STORAGE_KEY, $theme));
 </script>
 
-<div class="mb-10">
+<div class="mb-10 flex justify-between flex-wrap gap-3">
 	<SearchInput on:value={(e) => filters.updateNameFilter(e.detail)} />
+	<RegionDropdown
+		selected={$filters.region}
+		on:select={(e) => filters.updateRegionFilter(e.detail)}
+	/>
 </div>
 {#await countries.load()}
 	<p>loading...</p>
